@@ -1,69 +1,102 @@
+'use strict';
+
 function Controller() {
-  let myModel,
-      myContainer,
-      keys,
+  let myModel = null,
+      myControllerContainer = null,
+      keys = null,
       self = this;
 
   this.init = function(model, container) {
     myModel = model;
-    myContainer = container;
+    myControllerContainer = container;
     keys = {};
 
-    window.addEventListener('hashchange', self.updateState);  // обновление состояния при изменении location.hash
-    window.addEventListener('load', self.updateState);  // обновление состояния при загрузке
-    window.addEventListener('resize', self.resize);  // изменение размеров браузера
-    window.addEventListener('click', self.setEventTarget);  // забираем event.target при клике
-  }
+    // обновление состояния при изменении location.hash
+    window.addEventListener('hashchange', self.updateState);
+    // обновление состояния при загрузке
+    window.addEventListener('load', self.updateState);
+    // изменение размеров браузера
+    window.addEventListener('resize', self.resize);
+    // забираем event.target при клике
+    window.addEventListener('click', self.setEventTarget);
+  };
 
-  self.updateState = function() {   
+  self.updateState = function() {
     myModel.updateState();
-  }
+    if (myControllerContainer.querySelector('#game')) {
+      myControllerContainer.querySelector('#playerName').addEventListener('input', self.checkValue);
+    }
+  };
+
+  self.resize = function() {
+    myModel.updateState();
+  };
 
   self.setEventTarget = function() {
-    if(this.event.target === myContainer.querySelector('#start')) {
+    if (this.event.target === myControllerContainer.querySelector('#start')) {
       myModel.startGame();
       window.addEventListener('keydown', self.keyDown);
       window.addEventListener('keyup', self.keyUp);
     }
-    if(this.event.target === myContainer.querySelector('#pause')) {
+    if (this.event.target === myControllerContainer.querySelector('#start-lvl')) {
+      myModel.levelStartGame();
+      window.addEventListener('keydown', self.keyDown);
+      window.addEventListener('keyup', self.keyUp);
+    }
+    if (this.event.target === myControllerContainer.querySelector('#pause')) {
       myModel.pauseGame();
       window.removeEventListener('keydown', self.keyDown);
       window.removeEventListener('keyup', self.keyUp);
     }
-    if(this.event.target === myContainer.querySelector('#resume')) {
-      myModel.resumeGame();
+    if (this.event.target === myControllerContainer.querySelector('#resume')) {
+      myModel.gameReturn();
       window.addEventListener('keydown', self.keyDown);
       window.addEventListener('keyup', self.keyUp);
     }
-    if (this.event.target === myContainer.querySelector('#canvas')) {
+    if (this.event.target === myControllerContainer.querySelector('#canvas')) {
       self.shot();
     }
-  }
+    if(this.event.target === myControllerContainer.querySelector('#save')) {
+      self.saveData();
+    }
+    if (this.event.target === myControllerContainer.querySelector('#close')) {
+      self.closeModal();
+    }
+  };
 
   self.shot = function() {
     myModel.createFireball();
-  }
-
-  //Событие keydown происходит при нажатии клавиши, а keyup – при отпускании.
+  };
 
   self.keyDown = function() {
-    // ставим флаг, если нажата какая-нибудь клавиша
-    keys[event.keyCode] = 1;  
-  }
+    keys[event.keyCode] = 1;
+  };
 
   self.keyUp = function() {
-    // удаляем флаг при keyup
-    delete (keys[event.keyCode]);  
-  }
+    delete (keys[event.keyCode]);
+  };
 
   self.moveHero = function(keycode) {
     myModel.moveHero(keycode);
-  }
+  };
 
-  setInterval(function() {  // если в объекте keys есть нажатые клавиши, запускаем в интервале функцию движения героя
+  setInterval(function() {
     for (let keycode in keys) {
       self.moveHero(keycode);
     }
   }, 20);
 
+  self.checkValue = function() {
+    let input = myControllerContainer.querySelector('#playerName');
+    myModel.checkValue(input);
+  };
+
+  self.saveData = function() {
+    let input = myControllerContainer.querySelector('#playerName');
+    myModel.saveData(input);
+  };
+
+  self.closeModal = function() {
+    myModel.closeModal();
+  }
 }
