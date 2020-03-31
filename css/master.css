@@ -1,0 +1,199 @@
+html,
+body {
+    font-family: 'Mansalva', cursive !important;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: block;
+}
+
+header {
+    /* width: 100%; */
+    height: 100vh;
+    background-image: url(".././img/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+header p {
+    color: #fff;
+    font-size: 0.9rem;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 6px;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+.buffer {
+    height: 17rem;
+}
+
+@media (max-width: 1200px) {
+    .buffer {
+        display: none;
+    }
+}
+
+#wr-nav {
+    font-family: "Roboto", sans-serif;
+}
+
+#wr-about {
+    /* height: 100vh; */
+    padding: 5% 0;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 5rem;
+    font-size: 3rem;
+}
+
+#wr-about h2 {
+    font-family: 'Mansalva', cursive;
+}
+
+#wr-about .container .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wr-about p {
+    font-family: 'Mansalva', cursive;
+    font-size: 2rem;
+}
+
+#wr-about img {
+    transform: scaleX(-1);
+}
+
+#wr-portfolio {
+    padding: 10% 0;
+    /* height: 100vh; */
+}
+
+@media (max-width: 991px) {
+    #wr-about .row-cols {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        padding: .1rem .3rem;
+    }
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    #wr-about .row {
+        flex-direction: column;
+    }
+    #wr-about p {
+        font-size: 1rem;
+    }
+    #wr-about img {
+        width: 280px;
+    }
+}
+
+#wr-blog {
+    padding: 10% 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.grid-block {
+    border: 1px solid rgb(213, 213, 213);
+    border-radius: 4px;
+    padding: 5% 0;
+}
+
+.project-grid span {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    /* padding: 3% 0; */
+    width: 15rem;
+    display: inline-block;
+    border: 2px solid #333;
+}
+
+.project-grid a div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-grid a img {
+    width: 300px;
+    height: 100px;
+}
+
+.project-grid a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid a img {
+        width: 200px;
+    }
+
+    .project-grid span {
+        font-size: 1rem;
+        width: 10rem;
+    }
+}
+
+.pr {
+    color: #333;
+}
+
+footer {
+    color: #fff;
+    padding: 2% 0;
+    background-color: #000;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    font-size: 1.3rem;
+}

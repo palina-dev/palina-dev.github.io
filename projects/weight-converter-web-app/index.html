@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Styles -->
+    <style type="text/css">
+    	body {
+			margin-top: 2%;
+			background-color: #333;
+			color: #fff;
+		}
+
+		.card {
+			padding: 2% 3%;
+		}
+
+		h1 {
+			font-size: 70px;
+		}
+
+    </style>
+    <title>Web App - Weight Converter</title>
+    
+
+</head>
+<body>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 offset-md-3">
+				<h1 class="display-4 text-center mb-3">Weight Converter</h1>
+
+				<!-- POUNDS CONVERTATION -->
+				<div id="pounds">
+
+					<h2 class="display-3 text-center mb-3">Pounds</h2>
+
+					<form>
+					<div class="form-group">
+						<input id="lbsInput" class="form-control form-control-lg" type="number" placeholder="Enter pounds..."></input>
+					</div>
+				</form>
+				<div id="output">
+
+					<!-- Grams OutPut -->
+					<div class="card bg-primary mb-2">
+						<div class="card-block">
+							<h4>Grams:</h4>
+							<div id="gramsOutput"></div>
+						</div>
+					</div>
+
+					<!-- Kilograms OutPut -->
+					<div class="card bg-success mb-2">
+						<div class="card-block">
+							<h4>Kilograms:</h4>
+							<div id="kgOutput"></div>
+						</div>
+					</div>
+
+					<!-- Ounces OutPut -->
+					<div class="card bg-danger mb-2">
+						<div class="card-block">
+							<h4>Ounces:</h4>
+							<div id="ozOutput"></div>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

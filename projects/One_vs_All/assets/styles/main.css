@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#main, #game, #rules, #results {
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/main.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+}
+
+.nav {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#main h1 {
+  margin-bottom: 10%;
+  color: #ffffff;
+  font-family: 'Dancing Script', cursive;
+  font-size: 6rem;
+}
+
+#main div {
+  margin-bottom: 10%;
+}
+
+#main a {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+#game a, #rules a, #results a {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+#main a:hover, #game a:hover, #rules a:hover, #results a:hover {
+  text-decoration: underline;
+}
+
+#game button {
+  margin: 0 auto;
+  font-size: 2vh;
+  margin-top: 3%;
+}
+
+canvas {
+  margin-top: 3%;
+  
+}
+
+#score {
+  font-size: 1.5vw;
+}
+
+#scoreTable {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#scoreTable th, #scoreTable td {
+  border: none;
+  width: 35%;
+  font-size: 3vh;
+}
+
+#rules p {
+  color: #ffffff;
+  padding: 1vw 5vw;
+  font-size: 3vh;
+}
+
+/* #canvas, #results, #rules, #game {
+  min-width: 780px;
+  min-height: 640px;
+} */
+
+#app {
+  overflow: hidden;
+}
