@@ -5,9 +5,26 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
 
-#main, #game, #rules, #results {
+#main h1 {
+  margin-bottom: 10%;
+  color: #ffffff;
+  font-family: 'Dancing Script', cursive;
+  font-size: 6rem;
+}
+
+#main div {
+  margin-bottom: 10%;
+}
+
+#main a {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+#main, #game, #levelGame, #levels, #rules, #results {
   width: 100vw;
   height: 100vh;
   background: url(../img/main.jpg);
@@ -37,28 +54,49 @@ body {
   color: #ffffff;
 }
 
-#game a, #rules a, #results a {
+#game a, #rules a, #results a, #levelGame a, #levels a {
   font-size: 1rem;
   color: #ffffff;
 }
 
-#main a:hover, #game a:hover, #rules a:hover, #results a:hover {
+#main a:hover, #game a:hover, #rules a:hover, #results a:hover, #levelGame a:hover, #levels a:hover {
   text-decoration: underline;
 }
 
-#game button {
+#game button, #levels button {
   margin: 0 auto;
   font-size: 2vh;
   margin-top: 3%;
 }
 
+#levelGame div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5%;
+  grid-auto-rows: 200px;
+  padding: 10%;
+}
+
+#levelGame div > a {
+  align-self: center;
+  justify-self: center;
+  display: block;
+  padding: 5% 9%;
+  background-color: #333;
+  color: #fff;
+  font-size: 2rem;
+  display: block;
+  cursor: pointer;
+}
+
 canvas {
-  margin-top: 3%;
-  
+  margin-top: 1%;
 }
 
 #score {
-  font-size: 1.5vw;
+  font-size: 2rem;
+  margin-top: 1%;
+  color: #ffffff;
 }
 
 #scoreTable {
@@ -82,6 +120,10 @@ canvas {
   min-width: 780px;
   min-height: 640px;
 } */
+
+table th, td {
+  color: #fff;
+}
 
 #app {
   overflow: hidden;
