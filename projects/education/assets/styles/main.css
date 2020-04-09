@@ -1,0 +1,35 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: monospace;
+    height: 100vh;
+}
+
+nav li {
+    list-style: none;
+    text-align: center;
+    margin: 10% 0;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #37A0B8;
+    font-size: 4rem;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    nav li a {
+        font-size: 2rem;
+    }
+}
