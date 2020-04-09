@@ -5,7 +5,8 @@ let numberA = document.getElementById('a'),
 
 let aRandom = numberA.innerHTML = getRandomNumber(1, 100),
     bRandom = numberB.innerHTML = getRandomNumber(1, 100),
-    signRandom = sign.innerHTML = getRandomSign();
+    signRandom = sign.innerHTML = getRandomSign(),
+    plusSign = '+';
 
 function checkResult() {
     let temp;
