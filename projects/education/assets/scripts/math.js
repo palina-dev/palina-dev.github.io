@@ -20,7 +20,12 @@ function checkResult() {
         aRandom = numberA.innerHTML = getRandomNumber(1, 100);
         bRandom = numberB.innerHTML = getRandomNumber(1, 100);
         signRandom = sign.innerHTML = getRandomSign();
-    } else {
+    } else if (-temp === parseInt(input.value)) {
+        input.value = '-';
+        aRandom = numberA.innerHTML = getRandomNumber(1, 100);
+        bRandom = numberB.innerHTML = getRandomNumber(1, 100);
+        signRandom = sign.innerHTML = getRandomSign();
+    }  else {
         alert(`Correct answer is ${temp}, your answer ${input.value}.`);
         input.value = '';
     }
