@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thinking...</title>
+    <link rel="stylesheet" href="./assets/styles/main.css">
+</head>
+<body>
+
+    <header>
+        <h1>Math App</h1><br>
+        <p>Improve your counting skills.</p>
+    </header>
+
+    <div id="numbers">
+        <span id="a">A</span>
+        <span id="sign"></span>
+        <span id="b">B</span>
+    </div><br>
+    <label for="result"></label>
+    <input type="number" id="result" autofocus inputmode="numeric" pattern="[0-9\-]*"><br>
+    <button id="btn" onclick="checkResult()" type="button">check</button>
+
+    <script src="./assets/scripts/math.js"></script>
+</body>
+</html>

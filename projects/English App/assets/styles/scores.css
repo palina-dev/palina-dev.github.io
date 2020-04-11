@@ -1,0 +1,13 @@
+table {
+    border-spacing: 5rem 1rem;
+    margin-bottom: 5%;
+}
+
+th {
+    font-size: 3rem;
+}
+
+td {
+    font-size: 2rem;
+    text-align: center;
+}
