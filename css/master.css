@@ -163,6 +163,7 @@ h2 {
 
 .project-grid a {
     text-decoration: none;
+    display: block;
 }
 
 @media (max-width: 768px) {
