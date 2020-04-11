@@ -30,7 +30,7 @@ let questions = [
         question: 'What is the meaning for the <br><span class="word">Collaborative</span>?',
         choice1: 'to change ideas or behavior in order to deal with something successfully',
         choice2: 'to explain something in order to make it easier to understand',
-        choice4: 'done by two or more people working together',
+        choice3: 'done by two or more people working together',
         answer: 3,
     }
 ];
