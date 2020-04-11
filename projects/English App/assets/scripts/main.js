@@ -61,7 +61,7 @@ let questions = [
 
 //CONSTANTS
 const CORRECT_BONUS = 1;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 6;
 
 startGame = () => {
     questionCounter = 0;
