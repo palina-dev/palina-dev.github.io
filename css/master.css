@@ -129,7 +129,7 @@ h2 {
 
 .project-grid {
     display: grid;
-    grid-gap: 5%;
+    grid-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
 }
