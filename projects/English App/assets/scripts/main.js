@@ -80,11 +80,34 @@ let questions = [
         choice3: 'to attach importance to something',
         answer: 3,
     },
+    {
+        question: 'What is the meaning for the <br><span class="word">Switch</span>?',
+        choice1: 'to change',
+        choice2: 'a method that allows you to buy things and pay for them later',
+        choice3: 'to give up something valuable to help yourself or others',
+        answer: 1,
+    },
+
+    {
+        question: 'What is the meaning for the <br><span class="word">Whine</span>?',
+        choice1: 'careful with money',
+        choice2: 'to complain in an annoying way about something unimportant',
+        choice3: 'a situation that is calm and not likely to change suddenly',
+        answer: 2,
+    },
+
+    {
+        question: 'What is the meaning for the <br><span class="word">Convey</span>?',
+        choice1: 'showing an understanding of others’ feelings',
+        choice2: 'endangered',
+        choice3: 'to express a thought or feeling so that it is understood',
+        answer: 3,
+    },
 ];
 
 //CONSTANTS
 const CORRECT_BONUS = 1;
-const MAX_QUESTIONS = 9;
+const MAX_QUESTIONS = 12;
 
 startGame = () => {
     questionCounter = 0;
