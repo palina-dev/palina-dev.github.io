@@ -56,12 +56,35 @@ let questions = [
         choice2: 'a big problem',
         choice3: 'information and understanding about a subject',
         answer: 3,
-    }
+    },
+    {
+        question: 'What is the meaning for the <br><span class="word">Possess</span>?',
+        choice1: 'to have or to own',
+        choice2: 'a plan that shows the amount of money available to spend',
+        choice3: 'to return money that you owe someone',
+        answer: 1,
+    },
+
+    {
+        question: 'What is the meaning for the <br><span class="word">Remark</span>?',
+        choice1: 'to continue to exist',
+        choice2: 'something that you say (fact or opinion)',
+        choice3: 'the money remaining after your bills are paid',
+        answer: 2,
+    },
+
+    {
+        question: 'What is the meaning for the <br><span class="word">Sensitive</span>?',
+        choice1: 'to disappear',
+        choice2: 'the money remaining after your bills are paid',
+        choice3: 'to attach importance to something',
+        answer: 3,
+    },
 ];
 
 //CONSTANTS
 const CORRECT_BONUS = 1;
-const MAX_QUESTIONS = 6;
+const MAX_QUESTIONS = 9;
 
 startGame = () => {
     questionCounter = 0;
